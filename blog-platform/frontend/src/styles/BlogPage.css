@@ -1,0 +1,176 @@
+.blog-page {
+  background: var(--gray-light);
+}
+
+.blog-header {
+  text-align: center;
+  margin-bottom: 40px;
+  background: var(--white);
+  padding: 40px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.blog-header h1 {
+  font-size: 36px;
+  color: var(--dark);
+  margin-bottom: 12px;
+}
+
+.blog-header p {
+  color: var(--gray);
+  font-size: 16px;
+}
+
+.blog-content {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 32px;
+  background: var(--gray-light);
+}
+
+.posts-section {
+  background: var(--white);
+  border-radius: 8px;
+  padding: 24px;
+}
+
+.filters {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.filters select {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--white);
+  cursor: pointer;
+}
+
+.posts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+}
+
+.pagination button {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.pagination button:hover:not(:disabled) {
+  background: var(--primary-dark);
+}
+
+.pagination button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.blog-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.sidebar-card {
+  background: var(--white);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.sidebar-card h3 {
+  font-size: 18px;
+  margin-bottom: 16px;
+  color: var(--dark);
+}
+
+.popular-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.popular-list a {
+  color: var(--primary);
+  text-decoration: none;
+  font-size: 14px;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border);
+  transition: color 0.3s ease;
+}
+
+.popular-list a:last-child {
+  border-bottom: none;
+}
+
+.popular-list a:hover {
+  color: var(--primary-dark);
+}
+
+.newsletter-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.newsletter-form input {
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.newsletter-form button {
+  background: var(--secondary);
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.newsletter-form button:hover {
+  background: #059669;
+}
+
+@media (max-width: 768px) {
+  .blog-header {
+    padding: 24px 0;
+  }
+
+  .blog-header h1 {
+    font-size: 28px;
+  }
+
+  .blog-content {
+    grid-template-columns: 1fr;
+  }
+
+  .filters {
+    flex-direction: column;
+  }
+
+  .blog-sidebar {
+    grid-column: 1;
+  }
+}

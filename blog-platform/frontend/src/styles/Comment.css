@@ -1,0 +1,130 @@
+.comment-thread {
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 20px;
+}
+
+.comment-thread:last-child {
+  border-bottom: none;
+}
+
+.comment {
+  background: var(--white);
+  border-radius: 6px;
+  padding: 16px;
+  margin-bottom: 12px;
+}
+
+.comment-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.comment-author-info {
+  display: flex;
+  gap: 12px;
+  flex: 1;
+}
+
+.comment-author-info img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.author-name {
+  color: var(--dark);
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.author-name:hover {
+  color: var(--primary);
+}
+
+.comment-time {
+  display: block;
+  color: var(--gray);
+  font-size: 13px;
+}
+
+.delete-comment-btn {
+  background: none;
+  border: none;
+  color: var(--danger);
+  font-size: 20px;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.delete-comment-btn:hover {
+  opacity: 1;
+}
+
+.comment-text {
+  color: var(--dark);
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+.comment-actions {
+  display: flex;
+  gap: 16px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+}
+
+.like-btn,
+.reply-btn {
+  background: none;
+  border: none;
+  color: var(--gray);
+  cursor: pointer;
+  transition: color 0.3s ease;
+  font-size: 14px;
+}
+
+.like-btn:hover,
+.reply-btn:hover {
+  color: var(--primary);
+}
+
+.like-btn.liked {
+  color: var(--primary);
+}
+
+.comment-replies {
+  margin-left: 32px;
+  margin-top: 16px;
+}
+
+.replies-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.show-replies-btn {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.3s ease;
+}
+
+.show-replies-btn:hover {
+  background: var(--primary-dark);
+}
+
+@media (max-width: 768px) {
+  .comment-replies {
+    margin-left: 16px;
+  }
+}
