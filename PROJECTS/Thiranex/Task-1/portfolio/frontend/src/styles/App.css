@@ -1,0 +1,44 @@
+:root{
+  --bg:#f5f7fb; --primary:#1e3a8a; --muted:#64748b; --card:#ffffff;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,system-ui,Arial, sans-serif;background:var(--bg);color:#0f172a}
+.app-root main{max-width:1100px;margin:0 auto;padding:20px}
+
+/* Navbar */
+.nav{display:flex;justify-content:space-between;align-items:center;padding:12px 20px;background:linear-gradient(90deg,#fff, #f8fafc);position:sticky;top:0;z-index:40;border-bottom:1px solid #e6eef7}
+.nav .logo{font-weight:700;color:var(--primary)}
+.nav-links{display:flex;gap:16px}
+.nav a{color:var(--muted);text-decoration:none}
+.hamburger{display:none}
+
+/* Hero */
+.hero{display:flex;gap:20px;align-items:center;padding:60px 20px;background:linear-gradient(180deg,#e6f0ff, #fff);border-radius:8px;margin:16px 0}
+.hero .left{flex:1}
+.hero h1{font-size:32px;margin:0;color:var(--primary)}
+.tagline{color:var(--muted);margin:12px 0}
+.cta{display:flex;gap:12px}
+.btn{padding:10px 14px;border-radius:6px;border:none;cursor:pointer}
+.btn.primary{background:var(--primary);color:white}
+.btn.ghost{background:transparent;border:1px solid #cbd5e1}
+
+/* Projects grid */
+.projects-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:24px 0}
+.card{background:var(--card);padding:16px;border-radius:8px;box-shadow:0 6px 18px rgba(16,24,40,0.06);transition:transform .18s, box-shadow .18s}
+.card:hover{transform:translateY(-6px);box-shadow:0 14px 30px rgba(16,24,40,0.08)}
+.techs{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.tag{background:#eef2ff;color:var(--primary);padding:6px 8px;border-radius:999px;font-size:12px}
+
+/* Skills */
+.skills-row{display:flex;gap:16px;flex-wrap:wrap;margin:20px 0}
+.skill-card{flex:1;min-width:220px;background:var(--card);padding:16px;border-radius:8px}
+
+/* About & Contact */
+.about, .contact{background:var(--card);padding:20px;border-radius:8px;margin:16px 0}
+
+/* Footer */
+footer{text-align:center;padding:20px;color:var(--muted)}
+
+/* Responsive */
+@media (max-width: 900px){.projects-grid{grid-template-columns:repeat(2,1fr)}.nav-links{display:none}.hamburger{display:block}}
+@media (max-width: 520px){.projects-grid{grid-template-columns:1fr}.hero{flex-direction:column}.nav{padding:8px}}
